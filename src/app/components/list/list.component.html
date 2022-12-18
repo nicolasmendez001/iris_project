@@ -1,0 +1,7 @@
+<h1>{{todoFilter}}</h1>
+<mat-divider></mat-divider>
+<div>
+    <ul *ngFor="let todo of todoList | todoFilter: todoFilter ">
+        <app-item-todo [todo]="todo"></app-item-todo>
+    </ul>
+</div>

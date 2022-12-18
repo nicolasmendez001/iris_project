@@ -1,0 +1,18 @@
+<h1>To do List</h1>
+<div class="container">
+    <mat-form-field>
+        <mat-label>filter</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let item of filter" (click)="changeFilter(item)" value="item">
+                {{item}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <mat-label>Add todo</mat-label>
+            <input matInput [formControl]="addTodo" placeholder="Placeholder">
+            <button *ngIf="addTodo.value" matSuffix mat-icon-button aria-label="Clear" (click)="addTodoItem()"> <mat-icon matSuffix>add</mat-icon></button>
+        </mat-form-field>
+    </form>
+</div>

@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/scss/variables";
+
+body {
+    margin: 0px;
+    background-color: $back-color-02;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #045352;
+}
+
+
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-mdc-text-field-wrapper.mdc-text-field.mdc-text-field--filled {
+    background-color: white !important;
+    border-radius: 15px;
+    border: 1px solid #e1dcdc;
+}
+
+.mdc-line-ripple {
+    display: none;
+}
+
+.mat-mdc-select-arrow {
+    color: $font-color;
+}

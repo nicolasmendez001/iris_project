@@ -1,0 +1,10 @@
+@import "../../../assets/scss/_variables.scss";
+
+header {
+    background-color: $back-color-01;
+    height: 65px;
+    background-image: url('../../../assets/img/png/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80px;
+}
