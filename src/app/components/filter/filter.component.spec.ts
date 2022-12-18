@@ -23,4 +23,19 @@ describe('FilterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('call changeFilter', () => {
+    const changeMock = jest.spyOn((component as any).todoService, 'changeFilter');
+    component.changeFilter('finished');
+    expect(changeMock).toHaveBeenCalled();
+  });
+
+  it('call addTodoItem', () => {
+    const addMock = jest.spyOn((component as any).todoService, 'addTodo');
+    component.addTodoItem();
+    expect(addMock).toHaveBeenCalled();
+    expect(component.addTodo.value).toEqual('');
+  });
+
+
 });

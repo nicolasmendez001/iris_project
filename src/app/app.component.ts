@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { TodoService } from './services/todo-service.service';
 
@@ -7,16 +7,12 @@ import { TodoService } from './services/todo-service.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterContentInit {
+export class AppComponent {
   title = 'iris_code';
 
   constructor(private cookiService: CookieService, private todoService: TodoService) {
-   setTimeout(() => {
-    this.todoService.setTodoList(JSON.parse(this.cookiService.get('todoList')));
-   }, 1000);
-  }
-  ngAfterContentInit(): void {
-  }
-  ngAfterContentChecked(): void {
+    setTimeout(() => {
+      this.todoService.setTodoList(JSON.parse(this.cookiService.get('todoList')));
+    }, 1000);
   }
 }

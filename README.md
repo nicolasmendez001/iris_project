@@ -2,6 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
+## implementación
+
+se guarda la info en las `cookies` para precargarlas.
+se usa un servicio para comunicarse los cambios del `filtro` y `todos`;
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
