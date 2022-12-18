@@ -14,29 +14,22 @@ export class ItemTodoComponent implements OnInit {
   @Input() todo!: TodoItem;
   public checkTodo!: FormControl;
 
-  constructor(private todoService: TodoService){
+  constructor(private todoService: TodoService) {
 
   }
 
   ngOnInit(): void {
     this.checkTodo = new FormControl(this.todo.state === 'finished');
-    /* this.checkTodo.valueChanges.pipe(
-     (value) => {
-      console.log('v', value);
- 
-    }) */
   }
 
   /**
    * deleteItem
    */
-  public deleteItem() {
-    console.log("delete", this.todo.id);
-    
+  public deleteItem():void {
     this.todoService.deleteTodo(this.todo.id);
   }
 
-  checkValue(event: any) {
-    this.todo.state = event.checked ? 'finished' : 'pending';
+  checkValue(event: any):void {
+    this.todoService.changeState(this.todo, event.checked);
   }
 }

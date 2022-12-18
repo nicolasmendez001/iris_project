@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { take } from 'rxjs';
 import { TodoItem } from 'src/app/interfaces/ToDo';
 import { TodoService } from 'src/app/services/todo-service.service';
 

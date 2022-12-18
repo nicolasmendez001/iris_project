@@ -13,9 +13,7 @@ export class FilterComponent {
   public filter: string[] = ['all', 'finished', 'pending'];
   public addTodo: FormControl = new FormControl('');
 
-  constructor(private todoService: TodoService){
-    
-  }
+  constructor(private todoService: TodoService) {}
 
 
   /**
@@ -27,8 +25,8 @@ export class FilterComponent {
 
   public addTodoItem() {
     if (this.addTodo.invalid) return;
-   this.todoService.addTodo(new TodoItem(this.generateId(), 'pending', this.addTodo.value));
-
+    this.todoService.addTodo(new TodoItem(this.generateId(), 'pending', this.addTodo.value));
+    this.addTodo.setValue('');
   }
 
   private generateId(): string {
