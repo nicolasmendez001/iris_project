@@ -1,6 +1,15 @@
 .container {
-    width: 100%;
-    mat-form-field {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .form mat-form-field {
         width: 100%;
+    }
+    @media (min-width: 545px) {
+        flex-direction: row;
+
+       
     }
 }
